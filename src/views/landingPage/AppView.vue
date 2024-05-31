@@ -13,8 +13,10 @@ import Faq from './Faq.vue';
 import Footer from './Footer.vue';
 import Up from '@/components/icons/Up.vue';
 import ChatBox from '@/components/ChatBox.vue';
+import Loader from '@/components/Loader.vue';
 
 const showScrollToTop = ref(false);
+const isLoading = ref(true);
 
 const handleScroll = () => {
   if (window.scrollY > 300) {
@@ -33,6 +35,10 @@ const scrollToTop = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
+
+  setTimeout(() => {
+    isLoading.value = false;
+  }, 1000);
 });
 
 onUnmounted(() => {
@@ -43,6 +49,9 @@ onUnmounted(() => {
 
 <template>
   <div>
+    <!-- Loader -->
+    <Loader v-if="isLoading"/>
+
     <header>
       <Navbar />
     </header>

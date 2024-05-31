@@ -1,7 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import Footer from './landingPage/Footer.vue';
+import Loader from '@/components/Loader.vue';
 
 const faq = ref([
     {
@@ -102,10 +103,19 @@ const luxeFaq = ref([
         answer: 'We will try our best to assist with cancellations but it may or may not be possible depending on whether the order has been processed. Please reach out to our CX agent as soon as you would like to cancel.'
     },
 ])
+
+const isLoading = ref(true)
+onMounted(() => {
+    setTimeout(() => {
+        isLoading.value = false;
+    }, 1000);
+})
 </script>
 
 <template>
     <div>
+        <!-- Loader -->
+        <Loader v-if="isLoading" />
         <div class="mx-14 md:mx-24 lg:mx-32 my-12 space-y-5">
             <div v-for="(item, index) in faq" :key="index">
                 <p class="font-bold ">{{ item.question }}</p>

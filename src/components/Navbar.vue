@@ -51,6 +51,19 @@ onMounted(() => {
   isSignInPage.value = route.name === 'signin';
 });
 
+// isLogin
+const isLogin = ref(false);
+onMounted(() => {
+  const storedIsLogin = localStorage.getItem('isLogin');
+  if (storedIsLogin != null) {
+    isLogin.value = JSON.parse(storedIsLogin);
+  }
+})
+
+function signout() {
+  localStorage.removeItem('isLogin');
+  window.location.reload();
+}
 </script>
 
 <template>
@@ -112,10 +125,14 @@ onMounted(() => {
                 <div class="h-[1px] w-full mt-[14px] bg-gray-200"></div>
               </li>
               <li class="absolute bottom-0 w-[17rem]">
-                <router-link :to="{ name: 'signin' }"
+                <router-link :to="{ name: 'signin' }" v-if="!isLogin"
                   class="cursor-pointer block mb-6 text-white bg-black w-full text-center py-[10px] rounded-sm hover:opacity-50 transition ease-in-out text-sm">
                   <p>SIGN IN</p>
                 </router-link>
+
+                <button v-else @click.prevent="signout"
+                  class="cursor-pointer block mb-6 text-white bg-black w-full text-center py-[10px] rounded-sm hover:opacity-50 transition ease-in-out text-sm">SIGN
+                  OUT</button>
               </li>
             </ul>
           </div>
@@ -123,7 +140,8 @@ onMounted(() => {
 
         <!-- Title -->
         <div class="md:pl-24">
-          <p class="font-semibold text-2xl tracking-widest">STYLE THEORY</p>
+          <router-link :to="{ name: 'home' }"
+            class="font-semibold text-2xl tracking-widest text-black hover:text-opacity-50">STYLE THEORY</router-link>
         </div>
       </div>
 
