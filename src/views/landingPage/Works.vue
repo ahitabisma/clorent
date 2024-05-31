@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <!-- How It Works -->
-    <section id="works" class="pt-10 bg-red-100 py-5 px-5 lg:px-10 space-y-14 text-center">
+    <section id="works" class="pt-10 mt-10 bg-red-100 py-5 px-5 lg:px-10 space-y-14 text-center">
         <p class="font-semibold text-2xl">HOW IT WORKS</p>
         <div class="md:flex md:gap-10 space-y-10 md:space-y-0">
             <div>

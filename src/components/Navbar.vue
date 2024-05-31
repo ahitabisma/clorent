@@ -112,10 +112,10 @@ onMounted(() => {
                 <div class="h-[1px] w-full mt-[14px] bg-gray-200"></div>
               </li>
               <li class="absolute bottom-0 w-[17rem]">
-                <div
-                  class="cursor-pointer mb-6 text-white bg-black w-full text-center py-[10px] rounded-sm hover:opacity-50 transition ease-in-out text-sm">
-                  <router-link :to="{ name: 'signin' }">SIGN IN</router-link>
-                </div>
+                <router-link :to="{ name: 'signin' }"
+                  class="cursor-pointer block mb-6 text-white bg-black w-full text-center py-[10px] rounded-sm hover:opacity-50 transition ease-in-out text-sm">
+                  <p>SIGN IN</p>
+                </router-link>
               </li>
             </ul>
           </div>
