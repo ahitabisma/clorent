@@ -91,7 +91,7 @@ onMounted(() => {
             class="fixed bottom-0 right-0 md:bottom-16 md:right-4 w-full md:w-96 h-full md:h-auto z-20">
             <div class="bg-white shadow-md rounded-lg h-full md:max-w-lg md:w-full">
                 <div class="p-4 border-b bg-white text-black rounded-t-lg flex justify-between items-center">
-                    <p class="text-lg font-semibold">Style Theory</p>
+                    <p class="text-lg font-semibold">Clo Rent</p>
                     <button ref="closeChatButton"
                         class="text-gray-300 hover:text-gray-400 focus:outline-none focus:text-gray-400">
                         <Minus />

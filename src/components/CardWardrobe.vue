@@ -49,7 +49,8 @@ onMounted(() => {
     <div class="">
         <div class="flex justify-between items-center py-10">
             <p class="font-bold text-2xl">{{ title }}</p>
-            <a :href="viewAll" class="text-lg font-semibold text-black hover:text-opacity-50">View All</a>
+            <router-link :to="{ name: viewAll }" class="text-lg font-semibold text-black hover:text-opacity-50">View
+                All</router-link>
         </div>
 
         <!-- Carousel with navigation buttons -->
@@ -61,26 +62,26 @@ onMounted(() => {
             </button>
 
             <div ref="carouselRef" class="flex gap-5 overflow-x-auto carousel">
-                <a href="#" v-for="(image, index) in images" :key="image.id"
-                    class="flex flex-col bg-red-100 w-[186px] md:w-[168px] lg:w-[180px] carousel-item"
+                <router-link :to="{ name: 'browse-detail', params: { id: image.id } }" v-for="(image, index) in images"
+                    :key="image.id" class="flex flex-col bg-red-100 w-[186px] md:w-[168px] lg:w-[180px] carousel-item"
                     @mouseover="handleMouseOver(index)" @mouseleave="handleMouseLeave(index)">
                     <img loading="lazy" :src="image.isHovered ? image.hoverSrc : image.defaultSrc"
-                        :alt="`Image ${image.id}`" class="w-full h-auto" />
+                        :alt="`Image ${image.id}`" class="w-full h-80 md:h-[340px] lg:h-[275px]" />
                     <!-- Description Card -->
                     <div class="font-light py-5 text-center relative">
                         <p class="tracking-widest">{{ image.title }}</p>
                         <p class="text-xs">{{ image.desc }}</p>
                     </div>
-                </a>
+                </router-link>
 
                 <!-- View All -->
-                <a :href="viewAll"
+                <router-link :to="{ name: viewAll }"
                     class="flex flex-col bg-red-100 hover:bg-opacity-50 w-[186px] md:w-[168px] lg:w-[180px] carousel-item">
                     <!-- Description Card -->
                     <div class="font-normal flex items-center w-full h-full justify-center">
                         <p class="tracking-widest">View All</p>
                     </div>
-                </a>
+                </router-link>
             </div>
 
             <!-- Button Next -->

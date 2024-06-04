@@ -46,9 +46,13 @@ const handleLinkClick = (event: Event, targetId: string) => {
 // Use the route to determine if we're on the sign-in page
 const route = useRoute();
 const isSignInPage = ref(false);
+const isBrowsePage = ref(false);
 
 onMounted(() => {
   isSignInPage.value = route.name === 'signin';
+  if (route.fullPath.match('browse')) {
+    isBrowsePage.value = true;
+  }
 });
 
 // isLogin
@@ -101,7 +105,7 @@ function signout() {
               </li>
               <li class="cursor-pointer">
                 <a href="#fashion" @click.prevent="handleLinkClick($event, 'fashion')"
-                  class="hover:opacity-50 duration-75 transition ease-in-out">WHY STYLE THEORY</a>
+                  class="hover:opacity-50 duration-75 transition ease-in-out">WHY CLO RENT</a>
                 <div class="h-[1px] w-full mt-[14px] bg-gray-200"></div>
               </li>
               <li class="cursor-pointer">
@@ -116,7 +120,7 @@ function signout() {
               </li>
               <li class="cursor-pointer">
                 <a href="#say" @click.prevent="handleLinkClick($event, 'say')"
-                  class="hover:opacity-50 duration-75 transition ease-in-out">#WOMENOFSTYLETHEORY</a>
+                  class="hover:opacity-50 duration-75 transition ease-in-out">#WOMENOFCLORENT</a>
                 <div class="h-[1px] w-full mt-[14px] bg-gray-200"></div>
               </li>
               <li class="cursor-pointer">
@@ -141,26 +145,19 @@ function signout() {
         <!-- Title -->
         <div class="md:pl-24">
           <router-link :to="{ name: 'home' }"
-            class="font-semibold text-2xl tracking-widest text-black hover:text-opacity-50">STYLE THEORY</router-link>
+            class="font-semibold text-2xl tracking-widest text-black hover:text-opacity-50">CLO RENT</router-link>
         </div>
       </div>
-
-      <!-- Dropdown Language -->
-      <!-- <div class="md:hidden">
-        <select class="select select-bordered select-sm w-min bg-transparent border border-black">
-          <option>SGN</option>
-          <option selected>ID</option>
-          <option>HKG</option>
-        </select>
-      </div> -->
 
       <!-- Button Sign In -->
       <div v-if="!isSignInPage" class="hidden md:block text-xs">
         <router-link :to="{ name: 'signin' }"
           class="cursor-pointer tracking-widest lg:text-gray-500 font-semibold hover:text-opacity-50">SIGN
           IN</router-link>
-        <button :class="getStartedClass">GET STARTED</button>
+        <button v-if="isBrowsePage" class="cursor-pointer tracking-widest text-white bg-black py-2 px-4 rounded font-semibold lg:ml-5 hover:bg-opacity-50">SUBSCRIBE NOW</button>
+        <button v-else :class="getStartedClass">GET STARTED</button>
       </div>
+
     </div>
   </nav>
 </template>

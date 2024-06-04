@@ -44,7 +44,7 @@
                     alt="" class="w-full h-auto my-10 lg:my-0">
             </div>
             <div class="mx-10 px-5 font-light lg:mx-8 lg:w-1/2 space-y-6">
-                <p class="hidden lg:block text-2xl tracking-widest font-semibold">STYLE THEORY ON DEMAND</p>
+                <p class="hidden lg:block text-2xl tracking-widest font-semibold">CLO RENT ON DEMAND</p>
                 <p class="text-xl font-semibold">Need one-time rental for your special day?</p>
                 <p class="">Rent per piece for 4 days starting from <span class="font-semibold">IDR200.000</span></p>
                 <button class="bg-black hover:bg-opacity-50 text-white py-2 px-14 text-sm font-semibold rounded transition ease-in-out">BROWSE ON

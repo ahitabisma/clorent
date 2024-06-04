@@ -5,7 +5,7 @@ import { ref } from 'vue';
 const faq = ref([
     {
         id: 1,
-        question: 'How does Style Theory work?',
+        question: 'How does Clo Rent work?',
         answer: 'The Style Theory Membership is a monthly plan that allows you to rent from a wide collection of designer clothes.',
     },
     {
@@ -151,7 +151,8 @@ const luxeFaq = ref([
         <div class="mt-20 text-center text-sm">
             <p class="font-semibold mb-2">SEWA BAJU / GAUN FROM</p>
             <p class="font-semibold mb-5">IDR 290.000/MONTH</p>
-            <p class="font-light">Sewa gaun in Jakarta for kerja dan pesta. Sewa baju from populer bermerek dan mencoba desainer baju baru
+            <p class="font-light">Sewa gaun in Jakarta for kerja dan pesta. Sewa baju from populer bermerek dan mencoba
+                desainer baju baru
                 setiap hari. Pakaian desainer untuk disewa dengan model berlangganan bulanan yang mudah.</p>
         </div>
     </section>
