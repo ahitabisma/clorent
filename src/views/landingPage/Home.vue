@@ -6,7 +6,7 @@
       <!-- Desciption Get Started-->
       <div class="absolute z-[2] lg:relative lg:flex items-center h-full w-full">
         <div
-          class="mx-auto mt-[25rem] md:mt-[30rem] bg-red-100 md:w-96 w-[88%] px-8 pt-5 pb-8 rounded lg:w-full lg:mx-20 lg:-mt-14 lg:px-0">
+          class="mx-auto mt-[25rem] md:mt-[30rem] bg-red-100 md:w-96 w-[88%] px-8 pt-5 pb-8 rounded lg:w-full lg:mx-20 lg:-mt-56 lg:px-0">
           <p class="font-semibold lg:text-4xl lg:leading-normal text-2xl text-center lg:text-left">Wear new clothes
             every week
             without regret</p>
@@ -30,7 +30,7 @@
           src="https://images.ctfassets.net/c98fnax8301d/Dg42nhXGrJxPEhncGif3C/33c4467ea2b3a8d735562c21fd7a7f93/lp_ramadan_2022_b.jpg"
           alt="" loading="lazy" class="transform scale-[1.6] md:scale-100 w-full pt-24 md:pt-0"> -->
         <img
-          src="https://i.pinimg.com/474x/b8/dd/88/b8dd8805d2cf93ee43d760206288fdfe.jpg"
+          src="https://www.beactivewear.com.au/cdn/shop/products/cheeky-peachy-hoodie-original-hoodie-mint-green-33666232254633_840x1261.png?v=1629791155"
           alt="" loading="lazy" class="transform scale-[1.6] md:scale-100 w-full pt-24 md:pt-0">
       </div>
     </div>
