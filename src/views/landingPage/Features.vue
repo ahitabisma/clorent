@@ -40,7 +40,7 @@
             <div class="lg:w-[56%] bg-red-100">
                 <p class="text-2xl tracking-widest lg:hidden">STYLE THEORY ON DEMAND</p>
                 <img loading="lazy"
-                    src="https://images.ctfassets.net/c98fnax8301d/4sYgW7ceCoyBZdOJazZwIi/a7fac215d2ded4a23d275f2388aa30a9/on_demand_lp.jpg?fm=webp"
+                    src="https://media2.newlookassets.com/i/newlook/896857313/girls/girls-clothing/girls-tops/girls-off-white-west-coast-long-sleeve-polo-shirt.jpg?w=3072&upscale=false"
                     alt="" class="w-full h-auto my-10 lg:my-0">
             </div>
             <div class="mx-10 px-5 font-light lg:mx-8 lg:w-1/2 space-y-6">

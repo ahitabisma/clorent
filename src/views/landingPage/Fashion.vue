@@ -118,7 +118,7 @@
             <div class="lg:w-1/2">
                 <p class="text-2xl tracking-widest lg:hidden">THE JOY OF DRESSING UP THROUGH RENTING</p>
                 <video
-                    poster="https://images.ctfassets.net/c98fnax8301d/6cU3r8kMFQPnofOrLqg5AY/cc2f77c69336c9e421898a4e14ca9690/video_id_2019-10.jpg"
+                    poster="https://i.pinimg.com/564x/9f/13/87/9f1387a8eb07d83fdf310d5426564e4c.jpg"
                     class="mx-auto my-10 w-11/12 h-auto lg:w-80">
                     <source src="https://www.youtube.com/watch?v=mLjlzL3Jo0I" type="video/mp4">
                 </video>

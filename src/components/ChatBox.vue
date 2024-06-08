@@ -41,7 +41,7 @@ function addBotMessage(message: string) {
 function respondToUser(userMessage: string) {
     // Replace this with your chatbot logic
     setTimeout(() => {
-        addBotMessage("This is a response from the chatbot.");
+        addBotMessage("Thank you for contact us. Please wait a few seconds...");
     }, 500);
 }
 

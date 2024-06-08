@@ -5,6 +5,7 @@ import SignInPage from '@/views/SignInPage.vue'
 import AppView from '@/views/landingPage/AppView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import DetailProduct from '@/views/DetailProduct.vue'
+import RegisterPage from '@/views/RegisterPage..vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,7 +15,7 @@ const router = createRouter({
       name: 'home',
       component: AppView,
       meta: {
-        title: 'Sewa Baju Pesta - Clo Rent'
+        title: 'Sewa Baju Pesta | Clo Rent'
       }
     },
     {
@@ -22,7 +23,7 @@ const router = createRouter({
       name: 'faq',
       component: FaqPage,
       meta: {
-        title: 'FAQ - Clo Rent'
+        title: 'FAQ | Clo Rent'
       }
     },
     {
@@ -30,7 +31,15 @@ const router = createRouter({
       name: 'signin',
       component: SignInPage,
       meta: {
-        title: 'Sign In - Clo Rent'
+        title: 'Sign In | Clo Rent'
+      }
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: RegisterPage,
+      meta: {
+        title: 'Register | Clo Rent'
       }
     },
     {
@@ -54,7 +63,7 @@ const router = createRouter({
       name: 'browse-detail',
       component: DetailProduct,
       meta: {
-        title: 'Product - Clo Rent'
+        title: 'Product | Clo Rent'
       }
     }
   ],

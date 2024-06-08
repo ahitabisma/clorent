@@ -19,9 +19,9 @@ import Check from '@/components/icons/Check.vue';
                             alt="Lite" _mstalt="44538" _msthash="167" class="mx-auto my-3">
                         <p class="font-bold text-lg text-gray-900 text-opacity-80 mx-5 leading-tight">Starting from IDR
                             290,000 / Month</p>
-                        <button
-                            class="bg-black hover:bg-opacity-50 text-white py-2 px-14 rounded-md transition ease-in-out my-3">Get
-                            This Plan</button>
+                        <router-link :to="{ name: 'register' }"
+                            class="block bg-black hover:bg-opacity-50 text-white py-2 px-14 rounded-md transition ease-in-out my-3">Get
+                            This Plan</router-link>
                         <div class="w-full h-[1px] bg-gray-300 mt-3 mb-5"></div>
                         <ul class="text-sm space-y-3 font-light text-left  h-[19rem] max-h-[19rem]">
                             <li class="flex space-x-3 items-center gap-2 ">
@@ -60,9 +60,9 @@ import Check from '@/components/icons/Check.vue';
                             alt="Lite" _mstalt="44538" _msthash="167" class="mx-auto my-3">
                         <p class="font-bold text-lg text-gray-900 text-opacity-80 mx-5 leading-tight">Starting from IDR
                             440,000 / Month</p>
-                        <button
-                            class="bg-black hover:bg-opacity-50 text-white py-2 px-14 rounded-md transition ease-in-out my-3">Get
-                            This Plan</button>
+                        <router-link :to="{ name: 'register' }"
+                            class="block bg-black hover:bg-opacity-50 text-white py-2 px-14 rounded-md transition ease-in-out my-3">Get
+                            This Plan</router-link>
                         <div class="w-full h-[1px] bg-gray-300 mt-3 mb-5"></div>
                         <ul class="text-sm space-y-3 font-light text-left h-[19rem] max-h-[19rem]">
                             <li class="flex space-x-3 items-center gap-2 ">

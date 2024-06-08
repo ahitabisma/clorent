@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import Menu from './icons/Menu.vue';
 import XMark from './icons/XMark.vue';
 
@@ -29,9 +29,23 @@ onUnmounted(() => {
 });
 
 // Handle smooth scroll with offset
+const router = useRouter()
 const handleLinkClick = (event: Event, targetId: string) => {
   event.preventDefault();
-  const targetElement = document.getElementById(targetId);
+  if (router.currentRoute.value.name !== 'home') {
+    router.push({ name: 'home' }).then(() => {
+      setTimeout(() => {
+        scrollTo(targetId);
+      }, 1000);
+    });
+  } else {
+    scrollTo(targetId);
+  }
+
+};
+
+const scrollTo = (target: string) => {
+  const targetElement = document.getElementById(target);
   if (targetElement) {
     const offset = 50; // Adjust this value according to the height of your navbar
     const elementPosition = targetElement.getBoundingClientRect().top;
@@ -41,7 +55,7 @@ const handleLinkClick = (event: Event, targetId: string) => {
       behavior: 'smooth',
     });
   }
-};
+}
 
 // Use the route to determine if we're on the sign-in page
 const route = useRoute();
@@ -49,7 +63,9 @@ const isSignInPage = ref(false);
 const isBrowsePage = ref(false);
 
 onMounted(() => {
-  isSignInPage.value = route.name === 'signin';
+  if (route.name === 'signin' || route.name === 'register') {
+    isSignInPage.value = true;
+  }
   if (route.fullPath.match('browse')) {
     isBrowsePage.value = true;
   }
@@ -57,8 +73,8 @@ onMounted(() => {
 
 // isLogin
 const isLogin = ref(false);
+const storedIsLogin = localStorage.getItem('isLogin');
 onMounted(() => {
-  const storedIsLogin = localStorage.getItem('isLogin');
   if (storedIsLogin != null) {
     isLogin.value = JSON.parse(storedIsLogin);
   }
@@ -151,12 +167,19 @@ function signout() {
 
       <!-- Button Sign In -->
       <div v-if="!isSignInPage" class="hidden md:block text-xs">
-        <router-link :to="{ name: 'signin' }"
+        <router-link :to="{ name: 'signin' }" v-if="!isLogin"
           class="cursor-pointer tracking-widest lg:text-gray-500 font-semibold hover:text-opacity-50">SIGN
           IN</router-link>
-        <button v-if="isBrowsePage" class="cursor-pointer tracking-widest text-white bg-black py-2 px-4 rounded font-semibold lg:ml-5 hover:bg-opacity-50">SUBSCRIBE NOW</button>
-        <button v-else :class="getStartedClass">GET STARTED</button>
+        <router-link :to="{ name: 'register' }" v-if="isBrowsePage"
+          class="cursor-pointer tracking-widest text-white bg-black py-2 px-4 rounded font-semibold md:ml-5 hover:bg-opacity-50">SUBSCRIBE
+          NOW</router-link>
+        <router-link :to="{ name: 'register' }" v-else-if="!isBrowsePage && !isLogin" :class="getStartedClass">GET
+          STARTED</router-link>
+        <router-link :to="{ name: 'register' }" v-else-if="isLogin"
+          class="cursor-pointer tracking-widest text-white bg-black py-2 px-4 rounded font-semibold md:ml-5 hover:bg-opacity-50">SUBSCRIBE
+          NOW</router-link>
       </div>
+
 
     </div>
   </nav>

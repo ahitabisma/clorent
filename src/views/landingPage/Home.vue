@@ -26,8 +26,11 @@
 
       <!-- Image -->
       <div class="relative overflow-hidden h-[32rem] md:h-[36rem] lg:block lg:h-auto">
-        <img
+        <!-- <img
           src="https://images.ctfassets.net/c98fnax8301d/Dg42nhXGrJxPEhncGif3C/33c4467ea2b3a8d735562c21fd7a7f93/lp_ramadan_2022_b.jpg"
+          alt="" loading="lazy" class="transform scale-[1.6] md:scale-100 w-full pt-24 md:pt-0"> -->
+        <img
+          src="https://i.pinimg.com/474x/b8/dd/88/b8dd8805d2cf93ee43d760206288fdfe.jpg"
           alt="" loading="lazy" class="transform scale-[1.6] md:scale-100 w-full pt-24 md:pt-0">
       </div>
     </div>

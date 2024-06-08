@@ -13,22 +13,27 @@ const errorMessage = ref('');
 
 // Function to handle login
 const handleLogin = () => {
-    const storedEmail = localStorage.getItem('email');
-    const storedPassword = localStorage.getItem('password');
-
-    if (email.value === storedEmail && password.value === storedPassword) {
-        localStorage.setItem('isLogin', 'true');
-        router.push({ name: 'home' }); // Redirect to home page or another page
+    if (!localStorage.getItem('email')) {
+        errorMessage.value = 'Invalid email or password. Please create your account first.';
     } else {
-        errorMessage.value = 'Invalid email or password. Please try again.';
+
+        const storedEmail = localStorage.getItem('email');
+        const storedPassword = localStorage.getItem('password');
+
+        if (email.value === storedEmail && password.value === storedPassword) {
+            localStorage.setItem('isLogin', 'true');
+            router.push({ name: 'home' });
+        } else {
+            errorMessage.value = 'Invalid email or password. Please try again.';
+        }
     }
 };
 
 // Initialize stored user for demonstration purposes (only run once)
 const initializeUser = () => {
     if (!localStorage.getItem('email')) {
-        localStorage.setItem('email', 'test@gmail.com');
-        localStorage.setItem('password', '123123');
+        // localStorage.setItem('email', 'test@gmail.com');
+        // localStorage.setItem('password', '123123');
     }
 };
 
@@ -46,7 +51,7 @@ onMounted(() => {
     <div class="max-h-svh md:h-svh">
         <!-- Loader -->
         <Loader v-if="isLoading" />
-        
+
         <!-- Navbar -->
         <Navbar class="relative" />
 
@@ -109,8 +114,9 @@ onMounted(() => {
 
                 <!-- Dont Have Account -->
                 <div>
-                    <p class="text-sm text-center tracking-wider my-7 text-black hover:text-opacity-50 cursor-pointer">
-                        DON'T HAVE AN ACCOUNT? CREATE ACCOUNT HERE!</p>
+                    <router-link :to="{ name: 'register' }"
+                        class="block text-sm text-center tracking-wider my-7 text-black hover:text-opacity-50 cursor-pointer">
+                        DON'T HAVE AN ACCOUNT? CREATE ACCOUNT HERE!</router-link>
                 </div>
             </div>
         </div>
