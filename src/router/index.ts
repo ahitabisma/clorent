@@ -15,7 +15,7 @@ const router = createRouter({
       name: 'home',
       component: AppView,
       meta: {
-        title: 'Sewa Baju Pesta | Clo Rent'
+        title: 'Luxury Dress Rental | Clo Rent'
       }
     },
     {

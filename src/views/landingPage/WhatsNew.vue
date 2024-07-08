@@ -18,7 +18,7 @@
             </div>
 
             <div class="mt-5 lg:mt-0 text-center ">
-                <img loading="lazy" src="https://d2u7nrdrppwhsn.cloudfront.net/images/whats-new_next-day-delivery.jpg"
+                <img loading="lazy" src="https://img.freepik.com/free-photo/blank-image-black-background-shipping-box_125540-4517.jpg?ga=GA1.1.1493685759.1720455480&semt=ais_user"
                     alt="next day delivery" class="lg:w-[35rem] lg:h-64 lg:mx-auto transition ease-in-out duration-300">
                 <p class="font-light mx-8 mt-5">Now our delivery service is even faster, request your box before the day ends everyday (yes, even in
                     midnight!), and you can receive your box on the next day. Available for Jabodetabek area only,

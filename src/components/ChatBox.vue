@@ -100,7 +100,7 @@ onMounted(() => {
                 <div ref="chatbox" class="p-4 h-5/6 md:h-80 overflow-y-auto">
                     <!-- Chat messages will be displayed here -->
                     <div class="mb-2">
-                        <p class="bg-gray-200 text-gray-700 rounded-lg py-2 px-4 inline-block">Welcome to Style Theory!
+                        <p class="bg-gray-200 text-gray-700 rounded-lg py-2 px-4 inline-block">Welcome to Clo Rent!
                             😊 I'm here to match you with the right agent! 🙌
 
                             To offer the best support, <span class="font-semibold">I'll ask a few questions.</span>

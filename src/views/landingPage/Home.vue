@@ -18,9 +18,9 @@
             </p>
           </div>
 
-          <button
-            class="block mx-auto lg:mx-0 lg:rounded cursor-pointer text-white bg-black px-20 text-center py-[10px] rounded-sm hover:opacity-60 transition ease-in-out text-sm tracking-widest">GET
-            STARTED</button>
+          <router-link :to="{ name: 'register' }"
+            class="mx-auto lg:mx-0 lg:rounded cursor-pointer text-white bg-black px-20 text-center py-[10px] rounded-sm hover:opacity-60 transition ease-in-out text-sm tracking-widest">GET
+            STARTED</router-link>
         </div>
       </div>
 
