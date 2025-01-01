@@ -30,7 +30,7 @@
           src="https://images.ctfassets.net/c98fnax8301d/Dg42nhXGrJxPEhncGif3C/33c4467ea2b3a8d735562c21fd7a7f93/lp_ramadan_2022_b.jpg"
           alt="" loading="lazy" class="transform scale-[1.6] md:scale-100 w-full pt-24 md:pt-0"> -->
         <img
-          src="https://www.beactivewear.com.au/cdn/shop/products/cheeky-peachy-hoodie-original-hoodie-mint-green-33666232254633_840x1261.png?v=1629791155"
+          src="/bg.png"
           alt="" loading="lazy" class="transform scale-[1.6] md:scale-100 w-full pt-24 md:pt-0">
       </div>
     </div>
